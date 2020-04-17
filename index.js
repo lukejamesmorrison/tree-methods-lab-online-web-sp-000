@@ -15,7 +15,7 @@ function findOrAdd(rootNode, newNode)
 {
   // This block was pulled from solution as test 'text' was not clear.
   // it("should return true if the and not modify the tree if the element exists")
-  if(currentNode.data == newNode.data){
+  if(rootNode.data == newNode.data){
    return true
  }
   // Left
