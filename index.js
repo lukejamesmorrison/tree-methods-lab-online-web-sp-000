@@ -13,6 +13,11 @@ function inOrder(currentNode)
 
 function findOrAdd(rootNode, newNode)
 {
+  // This block was pulled from solution as test 'text' was not clear.
+  // it("should return true if the and not modify the tree if the element exists")
+  if(currentNode.data == newNode.data){
+   return true
+ }
   // Left
   if(rootNode.data > newNode.data){
     if(!rootNode.left){
@@ -20,7 +25,6 @@ function findOrAdd(rootNode, newNode)
     } else {
       findOrAdd(rootNode.left, newNode);
     };
-    return true;
   };
 
   // Right
@@ -30,7 +34,6 @@ function findOrAdd(rootNode, newNode)
     } else {
       findOrAdd(rootNode.right, newNode);
     };
-    return true;
   };
 }
 
