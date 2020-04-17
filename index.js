@@ -23,7 +23,7 @@ function findOrAdd(rootNode, newNode)
     if(!rootNode.left){
       return rootNode.left = newNode;
     } else {
-      findOrAdd(rootNode.left, newNode);
+      return findOrAdd(rootNode.left, newNode);
     };
   };
 
@@ -32,7 +32,7 @@ function findOrAdd(rootNode, newNode)
     if(!rootNode.right){
       return rootNode.right = newNode;
     } else {
-      findOrAdd(rootNode.right, newNode);
+      return findOrAdd(rootNode.right, newNode);
     };
   };
 }
