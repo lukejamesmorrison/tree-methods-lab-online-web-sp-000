@@ -13,24 +13,27 @@ function inOrder(currentNode)
 
 function findOrAdd(rootNode, newNode)
 {
+  // This block was pulled from solution as test 'text' was not clear.
+  // it("should return true if the and not modify the tree if the element exists")
+  if(rootNode.data == newNode.data){
+   return true
+ }
   // Left
   if(rootNode.data > newNode.data){
     if(!rootNode.left){
-      rootNode.left = newNode;
+      return rootNode.left = newNode;
     } else {
-      findOrAdd(rootNode.left, newNode);
+      return findOrAdd(rootNode.left, newNode);
     };
-    return true;
   };
 
   // Right
   if(rootNode.data < newNode.data){
     if(!rootNode.right){
-      rootNode.right = newNode;
+      return rootNode.right = newNode;
     } else {
-      findOrAdd(rootNode.right, newNode);
+      return findOrAdd(rootNode.right, newNode);
     };
-    return true;
   };
 }
 
@@ -40,7 +43,6 @@ function findOrAdd(rootNode, newNode)
 //         |
 //        --- 9
 //
-
 function max(node)
 {
   let maxNode = node;
