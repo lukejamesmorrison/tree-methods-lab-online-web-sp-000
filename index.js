@@ -30,7 +30,7 @@ function findOrAdd(rootNode, newNode)
   // Right
   if(rootNode.data < newNode.data){
     if(!rootNode.right){
-      retutn rootNode.right = newNode;
+      return rootNode.right = newNode;
     } else {
       findOrAdd(rootNode.right, newNode);
     };
