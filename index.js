@@ -43,7 +43,6 @@ function findOrAdd(rootNode, newNode)
 //         |
 //        --- 9
 //
-
 function max(node)
 {
   let maxNode = node;
